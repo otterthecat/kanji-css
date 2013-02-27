@@ -94,6 +94,7 @@ Kanji CSS
 Typography - requires mixins
 ***************************************************************/
 html {
+  font-family: Arial, sans-serif;
   font-size: 62.5%;
 }
 h1 {
@@ -127,23 +128,25 @@ body {
 /* Basic Theme
 **************************************************************/
 body {
-  width: 80%;
-  margin: 0 auto;
   background: #323232;
   color: #b2b2b2;
 }
-body > div > header,
-body > div > div,
-body > div > footer {
+.kanji {
+  width: 80%;
+  margin: 0 auto;
+}
+.kanji > header,
+.kanji > div,
+.kanji > footer {
   padding: 1%;
 }
-body > div > header {
+.kanji > header {
   background: #19b950;
 }
 a {
   color: #b9f5f0;
 }
-body > div > footer {
+.kanji > footer {
   clear: both;
   background: #107633;
   height: 5em;
