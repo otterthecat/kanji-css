@@ -17,9 +17,39 @@
 @support_color_med_light: lighten(@support_color, 25%);
 
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
-.font-size(@sizeValue){
+.font_size(@sizeValue){
   @remValue: @sizeValue;
   @pxValue: (@sizeValue * 10);
   font-size: ~"@{pxValue}px"; 
   font-size: ~"@{remValue}rem";
+}
+
+/* some helpers for basic css effects */
+.text_drop_shadow(@h: 3px, @v: 3px, @blur: 3px, @color: @primary_color_dark){
+	-webkit-text-shadow: @h @v @blur @color;
+	-moz-text-shadow: @h @v @blur @color;
+	-ms-text-shadow: @h @v @blur @color;
+	-o-text-shadow: @h @v @blur @color;
+	text-shadow: @h @v @blur @color;
+}
+
+.text_inset_shadow(@h: 0px, @v: 1px, @blur: 1px, @color: @primary_color_med_light){
+	-webkit-text-shadow: @h @v @blur @color;
+	-moz-text-shadow: @h @v @blur @color;
+	-ms-text-shadow: @h @v @blur @color;
+	-o-text-shadow: @h @v @blur @color;
+	text-shadow: @h @v @blur @color;
+}
+
+
+.box_drop_shadow(@h: 3px, @v: 3px, @r: 5px, @color: @primary_color_dark){
+	-webkit-box-shadow: @h @v @r @color;
+	-moz-box-shadow: @h @v @r @color;
+	box-shadow: @h @v @r @color;
+}
+
+.box_inset_shadow(@h: 0px, @v: 1px, @r: 1px, @color: @primary_color_light){
+	-webkit-box-shadow: @h @v @r @color;
+	-moz-box-shadow: @h @v @r @color;
+	box-shadow: @h @v @r @color;
 }

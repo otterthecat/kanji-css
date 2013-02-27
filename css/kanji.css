@@ -25,11 +25,16 @@ form,
 fieldset,
 button,
 input,
+textarea,
 select,
 ul,
 li,
-nav {
+nav,
+iframe,
+pre,
+code {
   display: block;
+  position: relative;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -37,6 +42,7 @@ nav {
   box-sizing: border-box;
 }
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
+/* some helpers for basic css effects */
 /* 
 Kanji CSS
 
@@ -79,6 +85,8 @@ Segments
   width: 25%;
   float: left;
 }
+.left-side-rail:after,
+.right-side-rail:after,
 .halves:after,
 .thirds:after,
 .quarters:after {
@@ -125,6 +133,15 @@ body {
   font-size: 18px;
   font-size: 1.8rem;
 }
+a {
+  text-decoration: none;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
 /* Basic Theme
 **************************************************************/
 body {
@@ -142,6 +159,13 @@ body {
 }
 .kanji > header {
   background: #19b950;
+}
+.kanji > header > h1 {
+  -webkit-text-shadow: 3px 3px 3px #107633;
+  -moz-text-shadow: 3px 3px 3px #107633;
+  -ms-text-shadow: 3px 3px 3px #107633;
+  -o-text-shadow: 3px 3px 3px #107633;
+  text-shadow: 3px 3px 3px #107633;
 }
 a {
   color: #b9f5f0;
