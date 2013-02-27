@@ -1,0 +1,153 @@
+/* KANJI CSS */
+/* Imports
+***************************************************************/
+/* 
+Kanji CSS
+
+Reset
+***************************************************************/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+section,
+header,
+hgroup,
+footer,
+a,
+p,
+form,
+fieldset,
+button,
+input,
+select,
+ul,
+li,
+nav {
+  display: block;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
+/* 
+Kanji CSS
+
+Segments
+***************************************************************/
+/* Right/Left Rails
+**************************************************************/
+.right-side-rail > section,
+.left-side-rail > section {
+  width: 85%;
+}
+.right-side-rail > .rail,
+.left-side-rail > .rail {
+  width: 15%;
+}
+.right-side-rail > section {
+  float: right;
+}
+.left-side-rail > section {
+  float: left;
+}
+.rail > nav ul {
+  list-style-type: none;
+}
+/* Halves
+*************************************************************/
+.halves > section {
+  width: 50%;
+  float: left;
+}
+/* Thirds
+*************************************************************/
+.thirds > section {
+  width: 33%;
+  float: left;
+}
+/* Quarters
+*************************************************************/
+.quarters > section {
+  width: 25%;
+  float: left;
+}
+.halves:after,
+.thirds:after,
+.quarters:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* 
+Kanji CSS
+
+Typography - requires mixins
+***************************************************************/
+html {
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 50px;
+  font-size: 5rem;
+}
+h2 {
+  font-size: 45px;
+  font-size: 4.5rem;
+}
+h3 {
+  font-size: 40px;
+  font-size: 4rem;
+}
+h4 {
+  font-size: 35px;
+  font-size: 3.5rem;
+}
+h5 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+h6 {
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+body {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+/* Basic Theme
+**************************************************************/
+body {
+  width: 80%;
+  margin: 0 auto;
+  background: #323232;
+  color: #b2b2b2;
+}
+body > div > header,
+body > div > div,
+body > div > footer {
+  padding: 1%;
+}
+body > div > header {
+  background: #19b950;
+}
+a {
+  color: #b9f5f0;
+}
+body > div > footer {
+  clear: both;
+  background: #107633;
+  height: 5em;
+}
+.billboard {
+  height: 10em;
+}

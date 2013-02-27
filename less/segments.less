@@ -1,0 +1,69 @@
+/* 
+Kanji CSS
+
+Segments
+***************************************************************/
+
+/* Right/Left Rails
+**************************************************************/
+.right-side-rail > section,
+.left-side-rail > section{
+	width: 85%;
+}
+
+.right-side-rail > .rail,
+.left-side-rail > .rail{
+
+	width: 15%;
+}
+
+.right-side-rail > section{
+
+	float: right;
+}
+
+.left-side-rail > section{
+
+	float: left;
+}
+
+.rail > nav ul{
+
+	list-style-type: none;
+}
+
+/* Halves
+*************************************************************/
+.halves > section{
+
+	width: 50%;
+	float: left;
+}
+
+
+/* Thirds
+*************************************************************/
+.thirds > section{
+
+	width: 33%;
+	float: left;
+}
+
+/* Quarters
+*************************************************************/
+.quarters > section{
+
+	width: 25%;
+	float: left;
+
+}
+
+.halves:after,
+.thirds:after,
+.quarters:after{
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+};

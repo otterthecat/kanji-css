@@ -1,0 +1,50 @@
+/* KANJI CSS */
+
+/* Imports
+***************************************************************/
+@import "reset";
+@import "mixins";
+@import "segments";
+@import "typography";
+
+/* Basic Theme
+**************************************************************/
+body {
+
+	width: 80%;
+	margin: 0 auto;
+	background: @support_color;
+	color: @support_color_light;
+}
+
+
+body > div > header,
+body > div > div,
+body > div > footer{
+	padding: 1%;
+}
+
+
+body > div > header{
+
+	background: @primary_color;
+}
+
+
+a {
+	
+	color: @secondary_color;
+}
+
+
+body > div > footer{
+
+	clear: both;
+	background: @primary_color_dark;
+	height: 5em;	
+}
+
+.billboard{
+
+	height: 10em;
+}
