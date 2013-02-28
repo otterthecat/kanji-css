@@ -55,12 +55,15 @@ Segments
   display: table;
   width: 100%;
 }
-.rail,
-.rail + * {
+.rail-section > .rail,
+.rail-section > .rail + * {
   float: none !important;
   display: table-cell;
 }
-.rail > nav ul {
+.rail-section > .rail {
+  vertical-align: top;
+}
+.rail-section > .rail > nav ul {
   list-style-type: none;
 }
 /* Halves
@@ -92,6 +95,7 @@ Segments
 .quarter,
 .rail + * {
   margin: .5em 0 0;
+  padding: 0 .5em .5em;
 }
 .halves:after,
 .thirds:after,
