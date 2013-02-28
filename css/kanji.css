@@ -51,15 +51,10 @@ Segments
 ***************************************************************/
 /* Side Rail(s)
 **************************************************************/
-.side-rail {
-  display: table;
-  width: 100%;
-}
-.side-rail > * {
+.rail,
+.rail + * {
+  float: none !important;
   display: table-cell;
-}
-.side-rail > .rail {
-  width: 25%;
 }
 .rail > nav ul {
   list-style-type: none;
@@ -85,14 +80,14 @@ Segments
   width: 25%;
   float: left;
 }
-.side-rail,
 .halves,
 .half,
 .thirds,
 .third,
 .quarters,
-.quarter {
-  margin: .5em 0;
+.quarter,
+.rail + * {
+  margin: .5em 0 0;
 }
 .halves:after,
 .thirds:after,
