@@ -4,27 +4,20 @@ Kanji CSS
 Segments
 ***************************************************************/
 
-/* Right/Left Rails
+/* Side Rail(s)
 **************************************************************/
-.right-side-rail > section,
-.left-side-rail > section{
-	width: 85%;
+.side-rail{
+	display: table;
+	width: 100%;
 }
 
-.right-side-rail > .rail,
-.left-side-rail > .rail{
-
-	width: 15%;
+.side-rail > * {
+	display: table-cell;
 }
 
-.right-side-rail > section{
+.side-rail > .rail{
 
-	float: right;
-}
-
-.left-side-rail > section{
-
-	float: left;
+	width: 25%;
 }
 
 .rail > nav ul{
@@ -34,7 +27,8 @@ Segments
 
 /* Halves
 *************************************************************/
-.halves > section{
+.halves > *,
+.half{
 
 	width: 50%;
 	float: left;
@@ -43,7 +37,8 @@ Segments
 
 /* Thirds
 *************************************************************/
-.thirds > section{
+.thirds > *,
+.third{
 
 	width: 33%;
 	float: left;
@@ -51,18 +46,25 @@ Segments
 
 /* Quarters
 *************************************************************/
-.quarters > section{
+.quarters > *,
+.quarter{
 
 	width: 25%;
 	float: left;
 
 }
 
-.left-side-rail:after,
-.right-side-rail:after,
+.side-rail,.halves,
+.half,.thirds,.third,
+.quarters,.quarter{
+
+	margin: .5em 0;
+}
+
 .halves:after,
 .thirds:after,
-.quarters:after{
+.quarters:after,
+.clear{
    content: "."; 
    visibility: hidden; 
    display: block; 

@@ -32,7 +32,8 @@ li,
 nav,
 iframe,
 pre,
-code {
+code,
+figure {
   display: block;
   position: relative;
   margin: 0;
@@ -48,48 +49,55 @@ Kanji CSS
 
 Segments
 ***************************************************************/
-/* Right/Left Rails
+/* Side Rail(s)
 **************************************************************/
-.right-side-rail > section,
-.left-side-rail > section {
-  width: 85%;
+.side-rail {
+  display: table;
+  width: 100%;
 }
-.right-side-rail > .rail,
-.left-side-rail > .rail {
-  width: 15%;
+.side-rail > * {
+  display: table-cell;
 }
-.right-side-rail > section {
-  float: right;
-}
-.left-side-rail > section {
-  float: left;
+.side-rail > .rail {
+  width: 25%;
 }
 .rail > nav ul {
   list-style-type: none;
 }
 /* Halves
 *************************************************************/
-.halves > section {
+.halves > *,
+.half {
   width: 50%;
   float: left;
 }
 /* Thirds
 *************************************************************/
-.thirds > section {
+.thirds > *,
+.third {
   width: 33%;
   float: left;
 }
 /* Quarters
 *************************************************************/
-.quarters > section {
+.quarters > *,
+.quarter {
   width: 25%;
   float: left;
 }
-.left-side-rail:after,
-.right-side-rail:after,
+.side-rail,
+.halves,
+.half,
+.thirds,
+.third,
+.quarters,
+.quarter {
+  margin: .5em 0;
+}
 .halves:after,
 .thirds:after,
-.quarters:after {
+.quarters:after,
+.clear {
   content: ".";
   visibility: hidden;
   display: block;
@@ -103,35 +111,35 @@ Typography - requires mixins
 ***************************************************************/
 html {
   font-family: Arial, sans-serif;
-  font-size: 62.5%;
+  font-size: 100%;
 }
 h1 {
-  font-size: 50px;
-  font-size: 5rem;
+  font-size: 24px;
+  font-size: 2.4rem;
 }
 h2 {
-  font-size: 45px;
-  font-size: 4.5rem;
+  font-size: 22px;
+  font-size: 2.2rem;
 }
 h3 {
-  font-size: 40px;
-  font-size: 4rem;
+  font-size: 20px;
+  font-size: 2rem;
 }
 h4 {
-  font-size: 35px;
-  font-size: 3.5rem;
-}
-h5 {
-  font-size: 30px;
-  font-size: 3rem;
-}
-h6 {
-  font-size: 25px;
-  font-size: 2.5rem;
-}
-body {
   font-size: 18px;
   font-size: 1.8rem;
+}
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+h6 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+body {
+  font-size: 12px;
+  font-size: 1.2rem;
 }
 a {
   text-decoration: none;
@@ -141,6 +149,12 @@ strong {
 }
 em {
   font-style: italic;
+}
+.center-text {
+  text-align: center;
+}
+.right-text {
+  text-align: right;
 }
 /* Basic Theme
 **************************************************************/
@@ -152,13 +166,12 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-.kanji > header,
-.kanji > div,
-.kanji > footer {
-  padding: 1%;
+.kanji > * {
+  padding: .5em;
 }
 .kanji > header {
   background: #19b950;
+  height: 7em;
 }
 .kanji > header > h1 {
   -webkit-text-shadow: 3px 3px 3px #107633;
@@ -167,14 +180,11 @@ body {
   -o-text-shadow: 3px 3px 3px #107633;
   text-shadow: 3px 3px 3px #107633;
 }
-a {
-  color: #b9f5f0;
-}
 .kanji > footer {
   clear: both;
   background: #107633;
   height: 5em;
 }
-.billboard {
-  height: 10em;
+a {
+  color: #b9f5f0;
 }
