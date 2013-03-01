@@ -19,8 +19,6 @@ body {
 
 	width: 80%;
 	margin: 0 auto;
-
-	@media only screen and (max-width: 320px) { width: 100%; margin: 0;}
 }
 
 .kanji > * {
@@ -32,8 +30,6 @@ body {
 
 	background: @primary_color;
 	height: 7em;
-
-	@media only screen and (max-width: 320px) { height: auto; min-height: 7em;}
 }
 
 .kanji > header > h1{
@@ -46,11 +42,41 @@ body {
 	clear: both;
 	background: @primary_color_dark;
 	height: 5em;	
-
-	@media only screen and (max-width: 320px) { height: auto; min-height: 5em;}
 }
 
 a {
 
 	color: @secondary_color;
 }
+
+@media only screen and (max-width: 480px) { 
+	
+	.kanji {
+
+		width: 100%;
+		margin: 0;
+
+		> header{
+
+			height: auto; min-height: 7em;
+		}
+
+		> footer{
+
+			height: auto;
+			min-height: 5em;
+		}
+	}
+}
+
+/* iPad Portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	
+	.kanji {
+
+		width: 90%;
+	}
+}
+
+
+
