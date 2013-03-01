@@ -10,12 +10,16 @@ Segments
 .rail-section{
 	display: table;
 	width: 100%;
+
+	@media only screen and (max-width: 320px) {display: block;}
 }
 
 .rail-section > .rail,
 .rail-section > .rail + *{
 	float: none !important;
 	display: table-cell;
+
+	@media only screen and (max-width: 320px) {display: block;}
 }
 
 .rail-section > .rail{
@@ -34,6 +38,8 @@ Segments
 
 	width: 50%;
 	float: left;
+
+	@media only screen and (max-width: 320px) { width: 100%; float: none; }
 }
 
 
@@ -43,6 +49,8 @@ Segments
 
 	width: 33%;
 	float: left;
+
+	@media only screen and (max-width: 320px) { width: 100%; float: none; }
 }
 
 /* Quarters
@@ -51,6 +59,8 @@ Segments
 
 	width: 25%;
 	float: left;
+
+	@media only screen and (max-width: 320px) { width: 100%; float: none; }
 }
 
 .halves, .half, .thirds,
@@ -59,6 +69,8 @@ Segments
 
 	margin: .5em 0 0;
 	padding: 0 .5em .5em;
+
+	@media only screen and (max-width: 320px) { padding: 0; }
 }
 
 .halves:after,
@@ -66,9 +78,11 @@ Segments
 .quarters:after,
 .clear{
 
-   content: "."; 
+   content: ""; 
    visibility: hidden; 
    display: block; 
    height: 0; 
    clear: both;
+
+   @media only screen and (max-width: 320px) { display: absolute;}
 }

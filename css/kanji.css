@@ -55,10 +55,21 @@ Segments
   display: table;
   width: 100%;
 }
+@media only screen and (max-width: 320px) {
+  .rail-section {
+    display: block;
+  }
+}
 .rail-section > .rail,
 .rail-section > .rail + * {
   float: none !important;
   display: table-cell;
+}
+@media only screen and (max-width: 320px) {
+  .rail-section > .rail,
+  .rail-section > .rail + * {
+    display: block;
+  }
 }
 .rail-section > .rail {
   vertical-align: top;
@@ -73,6 +84,13 @@ Segments
   width: 50%;
   float: left;
 }
+@media only screen and (max-width: 320px) {
+  .halves > *,
+  .half {
+    width: 100%;
+    float: none;
+  }
+}
 /* Thirds
 *************************************************************/
 .thirds > *,
@@ -80,12 +98,26 @@ Segments
   width: 33%;
   float: left;
 }
+@media only screen and (max-width: 320px) {
+  .thirds > *,
+  .third {
+    width: 100%;
+    float: none;
+  }
+}
 /* Quarters
 *************************************************************/
 .quarters > *,
 .quarter {
   width: 25%;
   float: left;
+}
+@media only screen and (max-width: 320px) {
+  .quarters > *,
+  .quarter {
+    width: 100%;
+    float: none;
+  }
 }
 .halves,
 .half,
@@ -97,15 +129,34 @@ Segments
   margin: .5em 0 0;
   padding: 0 .5em .5em;
 }
+@media only screen and (max-width: 320px) {
+  .halves,
+  .half,
+  .thirds,
+  .third,
+  .quarters,
+  .quarter,
+  .rail + * {
+    padding: 0;
+  }
+}
 .halves:after,
 .thirds:after,
 .quarters:after,
 .clear {
-  content: ".";
+  content: "";
   visibility: hidden;
   display: block;
   height: 0;
   clear: both;
+}
+@media only screen and (max-width: 320px) {
+  .halves:after,
+  .thirds:after,
+  .quarters:after,
+  .clear {
+    display: absolute;
+  }
 }
 /* 
 Kanji CSS
@@ -115,6 +166,11 @@ Typography - requires mixins
 html {
   font-family: Arial, sans-serif;
   font-size: 100%;
+}
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 115%;
+  }
 }
 h1 {
   font-size: 24px;
@@ -169,12 +225,24 @@ body {
   width: 80%;
   margin: 0 auto;
 }
+@media only screen and (max-width: 320px) {
+  .kanji {
+    width: 100%;
+    margin: 0;
+  }
+}
 .kanji > * {
   padding: .5em;
 }
 .kanji > header {
   background: #19b950;
   height: 7em;
+}
+@media only screen and (max-width: 320px) {
+  .kanji > header {
+    height: auto;
+    min-height: 7em;
+  }
 }
 .kanji > header > h1 {
   -webkit-text-shadow: 3px 3px 3px #107633;
@@ -187,6 +255,12 @@ body {
   clear: both;
   background: #107633;
   height: 5em;
+}
+@media only screen and (max-width: 320px) {
+  .kanji > footer {
+    height: auto;
+    min-height: 5em;
+  }
 }
 a {
   color: #b9f5f0;
