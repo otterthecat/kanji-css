@@ -53,6 +53,7 @@ Segments
 **************************************************************/
 .rail-section {
   display: table;
+  padding: .5em 0;
   width: 100%;
 }
 .rail-section > .rail,
@@ -142,23 +143,37 @@ Segments
 /* Phone landscape */
 @media only screen and (max-width: 480px) {
   .halves > *,
-  .half,
+  .half {
+    width: 100%;
+  }
   .thirds > *,
   .third,
   .quarters > *,
   .quarter {
     width: 50%;
   }
+  .rail.half,
+  .rail.third,
+  .rail.quarter {
+    width: 20%;
+  }
 }
 /* iPad Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .halves > *,
-  .half,
+  .half {
+    width: 100%;
+  }
   .thirds > *,
   .third,
   .quarters > *,
   .quarter {
     width: 50%;
+  }
+  .rail.half,
+  .rail.thrid,
+  .rail.quarter {
+    width: 20%;
   }
 }
 /* 
@@ -229,7 +244,8 @@ body {
   margin: 0 auto;
 }
 .kanji > * {
-  padding: .5em;
+  /* padding: .5em; */
+
 }
 .kanji > header {
   background: #19b950;
@@ -254,6 +270,7 @@ a {
   .kanji {
     width: 100%;
     margin: 0;
+    word-wrap: break-word;
   }
   .kanji > header {
     height: auto;

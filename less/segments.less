@@ -9,6 +9,7 @@ Segments
 
 .rail-section{
 	display: table;
+	padding: .5em 0;
 	width: 100%;
 }
 
@@ -111,21 +112,41 @@ Segments
 /* Phone landscape */
 @media only screen and (max-width: 480px) { 
 	
-	.halves > *, .half,
+	.halves > *, .half {
+
+		width: 100%;
+	}
+
 	.thirds > *, .third,
 	.quarters > *, .quarter{
 
 		width: 50%;
+	}
+
+	.rail.half,.rail.third,
+	.rail.quarter{
+
+		width: 20%;
 	}
 }
 
 /* iPad Portrait */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
 
-	.halves > *, .half,
+	.halves > *, .half {
+
+		width: 100%;
+	}
+
 	.thirds > *, .third,
 	.quarters > *, .quarter{
 
 		width: 50%;
+	}
+
+	.rail.half,.rail.thrid,
+	.rail.quarter{
+
+		width: 20%;
 	}
 }
