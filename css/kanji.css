@@ -108,12 +108,34 @@ Segments
   height: 0;
   clear: both;
 }
+/* Phone landscape */
+@media only screen and (max-width: 480px) {
+  .halves > *,
+  .half {
+    width: 100%;
+  }
+  .thirds > *,
+  .third,
+  .quarters > *,
+  .quarter {
+    width: 50%;
+  }
+  .rail.half,
+  .rail.third,
+  .rail.quarter {
+    width: 25%;
+  }
+}
 /* Phone Landscape */
 @media only screen and (max-width: 320px) {
   .rail-section,
   .rail-section > .rail,
-  .rail-section > .rail + * {
+  .rail-section > .rail + *,
+  .rail.half,
+  .rail.third,
+  .rail.quarter {
     display: block;
+    width: 100%;
   }
   .halves > *,
   .half,
@@ -140,24 +162,6 @@ Segments
     display: absolute;
   }
 }
-/* Phone landscape */
-@media only screen and (max-width: 480px) {
-  .halves > *,
-  .half {
-    width: 100%;
-  }
-  .thirds > *,
-  .third,
-  .quarters > *,
-  .quarter {
-    width: 50%;
-  }
-  .rail.half,
-  .rail.third,
-  .rail.quarter {
-    width: 20%;
-  }
-}
 /* iPad Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .halves > *,
@@ -173,7 +177,7 @@ Segments
   .rail.half,
   .rail.thrid,
   .rail.quarter {
-    width: 20%;
+    width: 25%;
   }
 }
 /* 
