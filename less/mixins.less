@@ -16,6 +16,28 @@
 @support_color_light: lighten(@support_color, 50%);
 @support_color_med_light: lighten(@support_color, 25%);
 
+@error_color: rgb(227,34,34);
+@error_bg_color: lighten(@error_color, 30%);
+
+@warn_color: rgb(260,150,5);
+@warn_bg_color: lighten(@warn_color, 30%);
+
+
+
+.status_box(@font_color: @error_color, @bg_color: @error_bg_color){
+	color: @font_color;
+	background: @bg_color;
+	border: 1px solid @font_color;
+}
+
+.error{
+	.status_box();
+}
+
+.warn{
+	.status_box(@warn_color, @warn_bg_color);
+}
+
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
 .font_size(@sizeValue){
   @remValue: @sizeValue;

@@ -55,8 +55,35 @@ strong{
 	font-weight: bold;
 }
 
-em{
+em, .italic{
 	font-style: italic;
+}
+
+/* Firefox (Linux & OSX) renders font a little
+   larger than expected... */
+pre{
+	padding: .25em;
+	border: 1px solid @support_color_light;
+	overflow: auto;
+}
+
+code{
+	.font_size(.9);
+	padding: 0 .4em;
+	color: @secondary_color_med_dark;
+	border-left: 1px solid @support_color_light;
+	border-right: 1px solid @support_color_light;
+}
+
+blockquote{
+	.status_box(@support_color_med_light, @support_color_dark);
+	margin: 0;
+	padding: .7em;
+	.italic;
+}
+blockquote:before,
+blockquote:after{
+	content: "\"";
 }
 
 .center-text{
@@ -65,4 +92,8 @@ em{
 
 .right-text{
 	text-align: right;
+}
+
+.underline{
+	text-decoration: underline;
 }

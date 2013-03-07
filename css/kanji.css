@@ -7,7 +7,10 @@ Kanji CSS
 Reset
 ***************************************************************/
 html,
-body,
+body {
+  padding: 0;
+  margin: 0;
+}
 h1,
 h2,
 h3,
@@ -30,17 +33,24 @@ select,
 ul,
 li,
 nav,
-iframe,
-pre,
-code,
-figure {
+iframe {
   display: block;
   position: relative;
   margin: 0;
-  padding: 0;
+  padding: .25%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.error {
+  color: #e32222;
+  background: #f4aaaa;
+  border: 1px solid #e32222;
+}
+.warn {
+  color: #ff9605;
+  background: #ffd8a1;
+  border: 1px solid #ff9605;
 }
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
 /* some helpers for basic css effects */
@@ -228,14 +238,45 @@ a {
 strong {
   font-weight: bold;
 }
-em {
+em,
+.italic {
   font-style: italic;
+}
+/* Firefox (Linux & OSX) renders font a little
+   larger than expected... */
+pre {
+  padding: .25em;
+  border: 1px solid #b2b2b2;
+  overflow: auto;
+}
+code {
+  font-size: 9px;
+  font-size: 0.9rem;
+  padding: 0 .4em;
+  color: #8cefe6;
+  border-left: 1px solid #b2b2b2;
+  border-right: 1px solid #b2b2b2;
+}
+blockquote {
+  color: #727272;
+  background: #0c0c0c;
+  border: 1px solid #727272;
+  margin: 0;
+  padding: .7em;
+  font-style: italic;
+}
+blockquote:before,
+blockquote:after {
+  content: "\"";
 }
 .center-text {
   text-align: center;
 }
 .right-text {
   text-align: right;
+}
+.underline {
+  text-decoration: underline;
 }
 /* Basic Theme
 **************************************************************/
@@ -246,14 +287,12 @@ body {
 .kanji {
   width: 80%;
   margin: 0 auto;
-}
-.kanji > * {
-  /* padding: .5em; */
-
+  padding: 0;
 }
 .kanji > header {
   background: #19b950;
   height: 7em;
+  padding-top: 0;
 }
 .kanji > header > h1 {
   -webkit-text-shadow: 3px 3px 3px #107633;
@@ -266,6 +305,7 @@ body {
   clear: both;
   background: #107633;
   height: 5em;
+  padding-bottom: 0;
 }
 a {
   color: #b9f5f0;
