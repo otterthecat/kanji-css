@@ -4,30 +4,40 @@ Kanji CSS
 Segments
 ***************************************************************/
 
-/* Side Rail(s)
-**************************************************************/
+.halves, .half, .thirds,
+.third, .quarters, .quarter{
 
-.rail-section{
-	display: table;
-	padding: .5em 0;
-	width: 100%;
+	margin: .5em 0 0;
+	padding: 0 .5em .5em;
 }
 
-.rail-section > .rail,
-.rail-section > .rail + *{
-	float: none !important;
-	display: table-cell;
+
+/* Thirds
+*************************************************************/
+.third + *{
+	width: 67%;
+	float: left;
 }
 
-.rail-section > .rail{
+.thirds > *, .third{
 
-	vertical-align: top;
+	width: 33%;
+	float: left;
 }
 
-.rail-section > .rail > nav ul{
-
-	list-style-type: none;
+/* Quarters
+*************************************************************/
+.quarter + *{
+	width: 75%;
+	float: left;
 }
+
+.quarters > *, .quarter{
+
+	width: 25%;
+	float: left;
+}
+
 
 /* Halves
 *************************************************************/
@@ -38,76 +48,55 @@ Segments
 }
 
 
-/* Thirds
+/* basic clearing of floats
 *************************************************************/
-.thirds > *, .third{
 
-	width: 33%;
-	float: left;
+.clear-all{
+	clear: both;
 }
 
-/* Quarters
-*************************************************************/
-.quarters > *, .quarter{
-
-	width: 25%;
-	float: left;
+.clear-left{
+	clear: left;
 }
 
-.halves, .half, .thirds,
-.third, .quarters, .quarter,
-.rail + * {
-
-	margin: .5em 0 0;
-	padding: 0 .5em .5em;
+.clear-right{
+	clear: right;
 }
+
 
 .halves:after,
 .thirds:after,
 .quarters:after,
-.clear{
+.two-thirds:after,
+.three-quarters:after{
 
    content: ""; 
    visibility: hidden; 
    display: block; 
    height: 0; 
-   clear: both;
+   .clear-all;
 }
 
 
 /* Phone landscape */
 @media only screen and (max-width: 480px) { 
 	
-	.halves > *, .half {
+	.halves > *, .half,
+	.quarter, .third {
 
 		width: 100%;
 	}
 
-	.thirds > *, .third,
-	.quarters > *, .quarter{
+	.thirds > *
+	.quarters > * {
 
 		width: 50%;
-	}
-
-	.rail.half,.rail.third,
-	.rail.quarter{
-
-		width: 25%;
 	}
 }
 
 
 /* Phone Landscape */
 @media only screen and (max-width: 320px) { 
-	
-	.rail-section,
-	.rail-section > .rail,
-	.rail-section > .rail + *,
-	.rail.half,.rail.third,.rail.quarter{
-
-		display: block;
-		width: 100%;
-	}
 
 	.halves > *, .half,
 	.thirds > *, .third,
@@ -118,8 +107,7 @@ Segments
 	}
 
 	.halves, .half, .thirds,
-	.third, .quarters, .quarter,
-	.rail + * {
+	.third, .quarters, .quarter{
 
 		padding: 0;
 	}
@@ -146,11 +134,5 @@ Segments
 	.quarters > *, .quarter{
 
 		width: 50%;
-	}
-
-	.rail.half,.rail.thrid,
-	.rail.quarter{
-
-		width: 25%;
 	}
 }
