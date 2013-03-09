@@ -51,6 +51,31 @@ a {
 	color: @secondary_color;
 }
 
+@media only screen and (max-width: 320px){
+
+		nav{
+			width: 100%;
+			text-align: center;
+		}
+
+		nav > ul {
+			width: 100%;
+			float: left;
+		}
+		
+		nav > ul > li{
+			.half;
+		}
+
+		nav > ul > li:last-child:after {
+   			content: ""; 
+   			visibility: hidden; 
+   			display: block; 
+   			height: 0; 
+   			.clear-all;
+		}	
+}
+
 @media only screen and (max-width: 480px) { 
 	
 	.kanji {
@@ -68,23 +93,6 @@ a {
 
 			height: auto;
 			min-height: 5em;
-		}
-
-		nav{
-			width: 100%;
-			text-align: center;
-		}
-		
-		nav > ul > li{
-			.quarter;
-		}
-
-		nav > ul > li:last-child:after {
-   			content: ""; 
-   			visibility: hidden; 
-   			display: block; 
-   			height: 0; 
-   			.clear-all;
 		}
 	}
 }
