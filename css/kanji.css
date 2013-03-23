@@ -259,6 +259,38 @@ blockquote:after {
 .underline {
   text-decoration: underline;
 }
+fieldset {
+  border: 1px dotted #727272;
+  padding: 1em;
+}
+input[type='text'],
+select {
+  width: 75%;
+  max-width: 200px;
+}
+input,
+textarea,
+button {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  -webkit-box-shadow: 0px 0px 5px #b2b2b2;
+  -moz-box-shadow: 0px 0px 5px #b2b2b2;
+  box-shadow: 0px 0px 5px #b2b2b2;
+}
+.inline label,
+.inline input,
+.inline select,
+.inline button {
+  display: inline-block;
+  margin: 0 .25em;
+}
 /* Basic Theme
 **************************************************************/
 body {

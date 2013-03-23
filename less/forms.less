@@ -1,0 +1,28 @@
+fieldset{
+	border: 1px dotted @support_color_med_light;
+	padding: 1em;
+}
+
+input[type='text'], select{
+	width: 75%;
+	max-width: 200px;
+}
+
+input, textarea, button {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+input:focus, textarea:focus, select:focus{
+
+	.box_drop_shadow(0px, 0px, 5px, @support_color_light);
+}
+
+
+.inline label, .inline input, .inline select, .inline button{
+	display: inline-block;
+	margin: 0 .25em;
+}
