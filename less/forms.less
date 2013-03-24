@@ -1,3 +1,9 @@
+/* 
+Kanji CSS
+
+Forms
+***************************************************************/
+
 fieldset{
 	border: 1px dotted @support_color_med_light;
 	padding: 1em;
@@ -18,9 +24,14 @@ input, textarea, button {
 
 input:focus, textarea:focus, select:focus{
 
-	.box_drop_shadow(0px, 0px, 5px, @support_color_light);
+	.box_drop_shadow(0px, 0px, 5px, @secondary_color_dark);
 }
 
+
+button{
+	border: 1px solid @secondary_color_dark;
+	.bg_gradient;
+}
 
 .inline label, .inline input, .inline select, .inline button{
 	display: inline-block;

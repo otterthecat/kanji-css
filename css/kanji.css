@@ -125,7 +125,8 @@ Segments
   .halves > *,
   .half,
   .quarter,
-  .third {
+  .third,
+  .three-quarters {
     width: 100%;
   }
   .thirds > * .quarters > * {
@@ -139,7 +140,8 @@ Segments
   .thirds > *,
   .third,
   .quarters > *,
-  .quarter {
+  .quarter,
+  .three-quarters {
     width: 100%;
     float: none;
   }
@@ -161,7 +163,8 @@ Segments
 /* iPad Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .halves > *,
-  .half {
+  .half,
+  .three-quarters {
     width: 100%;
   }
   .thirds > *,
@@ -213,6 +216,9 @@ body {
   font-size: 12px;
   font-size: 1.2rem;
 }
+p {
+  margin: 0 0 1em 0;
+}
 a {
   text-decoration: none;
 }
@@ -259,6 +265,11 @@ blockquote:after {
 .underline {
   text-decoration: underline;
 }
+/* 
+Kanji CSS
+
+Forms
+***************************************************************/
 fieldset {
   border: 1px dotted #727272;
   padding: 1em;
@@ -280,9 +291,17 @@ button {
 input:focus,
 textarea:focus,
 select:focus {
-  -webkit-box-shadow: 0px 0px 5px #b2b2b2;
-  -moz-box-shadow: 0px 0px 5px #b2b2b2;
-  box-shadow: 0px 0px 5px #b2b2b2;
+  -webkit-box-shadow: 0px 0px 5px #76ebe2;
+  -moz-box-shadow: 0px 0px 5px #76ebe2;
+  box-shadow: 0px 0px 5px #76ebe2;
+}
+button {
+  border: 1px solid #76ebe2;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(top), color-stop(0.5, #76ebe2), to(#e6fbfa));
+  background-image: -webkit-linear-gradient(top, #76ebe2, #e6fbfa);
+  background-image: -moz-linear-gradient(top, #76ebe2, #e6fbfa);
+  background-image: -o-linear-gradient(top, #76ebe2, #e6fbfa);
+  background-image: linear-gradient(top, #76ebe2, #e6fbfa);
 }
 .inline label,
 .inline input,
