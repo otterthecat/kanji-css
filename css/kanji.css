@@ -120,60 +120,6 @@ Segments
   height: 0;
   clear: both;
 }
-/* Phone landscape */
-@media only screen and (max-width: 480px) {
-  .halves > *,
-  .half,
-  .quarter,
-  .third,
-  .three-quarters {
-    width: 100%;
-  }
-  .thirds > * .quarters > * {
-    width: 50%;
-  }
-}
-/* Phone Landscape */
-@media only screen and (max-width: 320px) {
-  .halves > *,
-  .half,
-  .thirds > *,
-  .third,
-  .quarters > *,
-  .quarter,
-  .three-quarters {
-    width: 100%;
-    float: none;
-  }
-  .halves,
-  .half,
-  .thirds,
-  .third,
-  .quarters,
-  .quarter {
-    padding: 0;
-  }
-  .halves:after,
-  .thirds:after,
-  .quarters:after,
-  .clear {
-    display: absolute;
-  }
-}
-/* iPad Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .halves > *,
-  .half,
-  .three-quarters {
-    width: 100%;
-  }
-  .thirds > *,
-  .third,
-  .quarters > *,
-  .quarter {
-    width: 50%;
-  }
-}
 /* 
 Kanji CSS
 
@@ -182,11 +128,6 @@ Typography - requires mixins
 html {
   font-family: Arial, sans-serif;
   font-size: 100%;
-}
-@media only screen and (max-width: 320px) {
-  html {
-    font-size: 115%;
-  }
 }
 h1 {
   font-size: 24px;
@@ -342,30 +283,36 @@ body {
 a {
   color: #b9f5f0;
 }
-@media only screen and (max-width: 320px) {
-  nav {
-    width: 100%;
-    text-align: center;
+/* Media Breaks
+**************************************************************/
+/* iPad Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .kanji {
+    width: 90%;
   }
-  nav > ul {
+  .halves > *,
+  .half,
+  .three-quarters {
     width: 100%;
-    float: left;
   }
-  nav > ul > li {
-    margin: .5em 0 0;
-    padding: 0 .5em .5em;
+  .thirds > *,
+  .third,
+  .quarters > *,
+  .quarter {
     width: 50%;
-    float: left;
-  }
-  nav > ul > li:last-child:after {
-    content: "";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
   }
 }
 @media only screen and (max-width: 480px) {
+  .halves > *,
+  .half,
+  .quarter,
+  .third,
+  .three-quarters {
+    width: 100%;
+  }
+  .thirds > * .quarters > * {
+    width: 50%;
+  }
   .kanji {
     width: 100%;
     margin: 0;
@@ -380,9 +327,54 @@ a {
     min-height: 5em;
   }
 }
-/* iPad Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .kanji {
-    width: 90%;
+@media only screen and (max-width: 320px) {
+  html {
+    font-family: Arial, sans-serif;
+    font-size: 115%;
+  }
+  /* segments */
+  .halves > *,
+  .half,
+  .thirds > *,
+  .third,
+  .quarters > *,
+  .quarter,
+  .three-quarters {
+    width: 100%;
+    float: none;
+  }
+  .halves,
+  .half,
+  .thirds,
+  .third,
+  .quarters,
+  .quarter {
+    padding: 0;
+  }
+  .halves:after,
+  .thirds:after,
+  .quarters:after,
+  .clear {
+    display: absolute;
+  }
+  nav {
+    width: 100%;
+    text-align: center;
+  }
+  nav > ul {
+    width: 100%;
+    float: left;
+  }
+  nav > ul > li {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  nav > ul > li:last-child:after {
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
   }
 }

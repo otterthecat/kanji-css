@@ -8,6 +8,7 @@
 @import "typography";
 @import "forms";
 
+
 /* Basic Theme
 **************************************************************/
 body {
@@ -52,60 +53,8 @@ a {
 	color: @secondary_color;
 }
 
-@media only screen and (max-width: 320px){
-
-		nav{
-			width: 100%;
-			text-align: center;
-		}
-
-		nav > ul {
-			width: 100%;
-			float: left;
-		}
-		
-		nav > ul > li{
-			.half;
-		}
-
-		nav > ul > li:last-child:after {
-   			content: ""; 
-   			visibility: hidden; 
-   			display: block; 
-   			height: 0; 
-   			.clear-all;
-		}	
-}
-
-@media only screen and (max-width: 480px) { 
-	
-	.kanji {
-
-		width: 100%;
-		margin: 0;
-		word-wrap: break-word;
-
-		> header{
-
-			height: auto; min-height: 7em;
-		}
-
-		> footer{
-
-			height: auto;
-			min-height: 5em;
-		}
-	}
-}
-
-/* iPad Portrait */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-	
-	.kanji {
-
-		width: 90%;
-	}
-}
-
-
-
+/* Media Breaks
+**************************************************************/
+@import "ipadPortrait";
+@import "480";
+@import "320";

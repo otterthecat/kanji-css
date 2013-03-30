@@ -1,0 +1,59 @@
+@media only screen and (max-width: 320px){
+
+	html{
+
+		font-family: Arial, sans-serif;
+		font-size: 115%;
+	}
+
+	/* segments */
+	.halves > *, .half,
+	.thirds > *, .third,
+	.quarters > *, .quarter,
+	.three-quarters{
+
+		width: 100%;
+		float: none;
+	}
+
+	.halves, .half, .thirds,
+	.third, .quarters, .quarter{
+
+		padding: 0;
+	}
+
+	.halves:after,
+	.thirds:after,
+	.quarters:after,
+	.clear{	
+
+		display: absolute;
+	}
+
+
+	nav{
+		
+		width: 100%;
+		text-align: center;
+	}
+
+	nav > ul {
+
+		width: 100%;
+		float: left;
+	}
+		
+	nav > ul > li{
+
+		.half;
+	}
+
+	nav > ul > li:last-child:after {
+
+   		content: ""; 
+   		visibility: hidden; 
+   		display: block; 
+   		height: 0; 
+   		.clear-all;
+	}	
+}
