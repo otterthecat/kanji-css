@@ -109,6 +109,9 @@ Segments
 .clear-right {
   clear: right;
 }
+.quarter + * + * {
+  clear: both;
+}
 .halves:after,
 .thirds:after,
 .quarters:after,
@@ -310,7 +313,8 @@ a {
   .three-quarters {
     width: 100%;
   }
-  .thirds > * .quarters > * {
+  .thirds > *,
+  .quarters > * {
     width: 50%;
   }
   .kanji {
