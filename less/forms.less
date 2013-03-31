@@ -27,9 +27,14 @@ input:focus, textarea:focus, select:focus{
 	.box_drop_shadow(0px, 0px, 5px, @secondary_color_dark);
 }
 
+button, select{
+	cursor: pointer;
+}
 
 button{
-	border: 1px solid @secondary_color_dark;
+	border: 1px solid @support_color_dark;
+	color: @support_color_light;
+	font-size: inherit; /* helps keeps button size logical in relation to page - particularly Safari/iOS */
 	.bg_gradient;
 }
 

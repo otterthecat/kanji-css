@@ -84,7 +84,7 @@
 	box-shadow: @h @v @r @color;
 }
 
-.bg_gradient(@pos: top, @start_color: @secondary_color_dark , @end_color: @secondary_color_med_light){
+.bg_gradient(@pos: top, @start_color: @support_color_med_light , @end_color: @support_color_dark){
 
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@pos), color-stop(0.5, @start_color), to(@end_color));
 	background-image: -webkit-linear-gradient(@pos, @start_color, @end_color);
