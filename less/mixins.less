@@ -17,17 +17,21 @@
 @support_color_med_light: lighten(@support_color, 25%);
 
 @error_color: rgb(227,34,34);
-@error_bg_color: lighten(@error_color, 30%);
+@error_bg_color: lighten(@error_color, 35%);
 
 @warn_color: rgb(260,150,5);
-@warn_bg_color: lighten(@warn_color, 30%);
+@warn_bg_color: lighten(@warn_color, 35%);
 
+@info_color: rgb(60, 130, 250);
+@info_bg_color: lighten(@info_color, 35%);
 
 
 .status_box(@font_color: @error_color, @bg_color: @error_bg_color){
 	color: @font_color;
 	background: @bg_color;
 	border: 1px solid @font_color;
+	margin: .5em 0;
+	padding: .25em .5em;
 }
 
 .error{
@@ -36,6 +40,10 @@
 
 .warn{
 	.status_box(@warn_color, @warn_bg_color);
+}
+
+.info{
+	.status_box(@info_color, @info_bg_color);
 }
 
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */

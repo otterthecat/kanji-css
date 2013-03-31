@@ -44,13 +44,24 @@ iframe {
 }
 .error {
   color: #e32222;
-  background: #f4aaaa;
+  background: #f7c0c0;
   border: 1px solid #e32222;
+  margin: .5em 0;
+  padding: .25em .5em;
 }
 .warn {
   color: #ff9605;
-  background: #ffd8a1;
+  background: #ffe3bb;
   border: 1px solid #ff9605;
+  margin: .5em 0;
+  padding: .25em .5em;
+}
+.info {
+  color: #3c82fa;
+  background: #eaf2fe;
+  border: 1px solid #3c82fa;
+  margin: .5em 0;
+  padding: .25em .5em;
 }
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
 /* some helpers for basic css effects */
@@ -64,7 +75,9 @@ Segments
 .thirds,
 .third,
 .quarters,
-.quarter {
+.quarter,
+.quarter + *,
+.third + * {
   margin: .5em 0 0;
   padding: 0 .5em .5em;
 }
@@ -161,7 +174,7 @@ body {
   font-size: 1.2rem;
 }
 p {
-  margin: 0 0 1em 0;
+  margin: .5em 0 0 0;
 }
 a {
   text-decoration: none;
@@ -192,6 +205,8 @@ blockquote {
   color: #727272;
   background: #0c0c0c;
   border: 1px solid #727272;
+  margin: .5em 0;
+  padding: .25em .5em;
   margin: 0;
   padding: .7em;
   font-style: italic;
