@@ -337,7 +337,9 @@ a {
   }
   .halves > *,
   .half,
-  .three-quarters {
+  .three-quarters,
+  .quarter + *,
+  .third + * {
     width: 100%;
   }
   .thirds > *,
@@ -352,6 +354,8 @@ a {
   .half,
   .quarter,
   .third,
+  .quarter + *,
+  .third + *,
   .three-quarters {
     width: 100%;
   }
@@ -383,8 +387,10 @@ a {
   .half,
   .thirds > *,
   .third,
+  .third + *,
   .quarters > *,
   .quarter,
+  .quarter + *,
   .three-quarters {
     width: 100%;
     float: none;
