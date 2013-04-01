@@ -273,6 +273,13 @@ button {
   background-image: -o-linear-gradient(top, #727272, #0c0c0c);
   background-image: linear-gradient(top, #727272, #0c0c0c);
 }
+button:hover {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(top), color-stop(0.5, #727272), to(#181818));
+  background-image: -webkit-linear-gradient(top, #727272, #181818);
+  background-image: -moz-linear-gradient(top, #727272, #181818);
+  background-image: -o-linear-gradient(top, #727272, #181818);
+  background-image: linear-gradient(top, #727272, #181818);
+}
 .inline label,
 .inline input,
 .inline select,
@@ -302,6 +309,15 @@ body {
   -ms-text-shadow: 3px 3px 3px #107633;
   -o-text-shadow: 3px 3px 3px #107633;
   text-shadow: 3px 3px 3px #107633;
+}
+.kanji > nav {
+  width: 100%;
+}
+.kanji > nav ul li {
+  display: inline-block;
+}
+.kanji > nav ul li a {
+  display: block;
 }
 .kanji > footer {
   clear: both;
