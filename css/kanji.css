@@ -29,7 +29,11 @@ fieldset,
 ul,
 ol,
 nav,
-iframe {
+iframe,
+input,
+button,
+textarea,
+button {
   display: block;
   position: relative;
   margin: 0;
@@ -81,8 +85,8 @@ Segments
 .quarter,
 .quarter + *,
 .third + * {
-  margin: .5em 0 0;
-  padding: 0 .5em .5em;
+  margin: 0 0 .5rem;
+  padding: .25rem;
 }
 /* Thirds
 *************************************************************/
@@ -237,18 +241,41 @@ fieldset {
   border: 1px dotted #727272;
   padding: 1em;
 }
+.half input,
+.half select,
+.half textarea,
+.third input,
+.third select,
+.third textarea,
+.quarter input,
+.quarter select,
+.quarter textarea {
+  width: 100%;
+}
+label:after {
+  content: ":";
+}
 input[type="text"],
 input[type="email"],
-input[type="phone"],
+input[type="tel"],
+input[type="url"],
 textarea,
 select,
 label {
   display: block;
 }
 input[type="text"],
+input[type="url"],
+input[type="tel"],
+input[type="email"],
 select,
 textarea {
-  margin: 0 0 10px 0;
+  padding: .3rem;
+  font-size: 1.2rem;
+  margin: 0 0 2rem 0;
+}
+select {
+  height: auto;
 }
 textarea {
   min-height: 125px;

@@ -95,31 +95,46 @@ var f = function(x){
 			</div>
 		</section>
 
-		<section class="row">
+		<section class="row half">
 			<form action="">
 				<fieldset>
 					<legend>Text Fields</legend>
-					<label for="name">Name:</label>
-					<input id="name" type="text" class="half">
-					<label for="choice" class="row">Pick One:</label>
-					<select id="choice" class="half">
+					<label for="name">Name</label>
+					<input id="name" type="text">
+					<label for="choice" class="row">Pick One</label>
+					<select id="choice">
+						<option>Choose One</option>
 						<option value="1">choice 1</option>
 						<option value="2">choice 2</option>
 						<option value="3">choice 3</option>
 					</select>
-					<label for="filler" class="row">Filler:</label>
-					<textarea id="filler" class="half"></textarea>
+					<label for="filler" class="row">Filler</label>
+					<textarea id="filler"></textarea>
 				</fieldset>
 				
 				<fieldset class="inline">
 					<legend>Inputs</legend>
-					<h6>Colors:</h6>
+					<h6>Colors</h6>
 					<label>White<input name="color" value="white" type="checkbox"></label>
 					<label>Blue<input name="color" value="blue" type="checkbox"></label>
 					<label>Red<input name="color" value="red" type="checkbox"></label>
 				</fieldset>
 
 				<button type="submit">Submit</button>
+			</form>
+		</section>
+
+		<section class="half">
+			<form action="">
+				<fieldset>
+					<legend>Part 2</legend>
+					<label for="tel">Telephone</label>
+					<input id="tel" type="tel">
+					<label for="email">Email</label>
+					<input id="email" type="email">
+					<label for="url">Website</label>
+					<input id="url" type="url">
+				</fieldset>
 			</form>
 		</section>
 

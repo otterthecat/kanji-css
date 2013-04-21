@@ -10,22 +10,46 @@ fieldset{
 	padding: 1em;
 }
 
+.half input,
+.half select,
+.half textarea,
+.third input,
+.third select,
+.third textarea,
+.quarter input,
+.quarter select,
+.quarter textarea{
+	width: 100%;
+}
+
+label:after{
+	content: ":";
+}
+
 input[type="text"],
 input[type="email"],
-input[type="phone"],
+input[type="tel"],
+input[type="url"],
 textarea,
 select,
 label{
-
 	display: block;
 }
 
 
 input[type="text"],
+input[type="url"],
+input[type="tel"],
+input[type="email"],
 select,
 textarea{
+	padding: .3rem;
+	font-size: 1.2rem;
+	margin: 0 0 2rem 0;
+}
 
-	margin: 0 0 10px 0;
+select{
+	height: auto;
 }
 
 textarea{
