@@ -27,6 +27,7 @@
 
 
 .status_box(@font_color: @error_color, @bg_color: @error_bg_color){
+
 	color: @font_color;
 	background: @bg_color;
 	border: 1px solid @font_color;
@@ -35,27 +36,32 @@
 }
 
 .error{
+
 	.status_box();
 }
 
 .warn{
+
 	.status_box(@warn_color, @warn_bg_color);
 }
 
 .info{
+
 	.status_box(@info_color, @info_bg_color);
 }
 
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
 .font_size(@sizeValue){
-  @remValue: @sizeValue;
-  @pxValue: (@sizeValue * 10);
-  font-size: ~"@{pxValue}px"; 
-  font-size: ~"@{remValue}rem";
+
+	@remValue: @sizeValue;
+	@pxValue: (@sizeValue * 10);
+	font-size: ~"@{pxValue}px"; 
+	font-size: ~"@{remValue}rem";
 }
 
 /* some helpers for basic css effects */
 .text_drop_shadow(@h: 3px, @v: 3px, @blur: 3px, @color: @primary_color_dark){
+
 	-webkit-text-shadow: @h @v @blur @color;
 	-moz-text-shadow: @h @v @blur @color;
 	-ms-text-shadow: @h @v @blur @color;
@@ -64,6 +70,7 @@
 }
 
 .text_inset_shadow(@h: 0px, @v: 1px, @blur: 1px, @color: @primary_color_med_light){
+
 	-webkit-text-shadow: @h @v @blur @color;
 	-moz-text-shadow: @h @v @blur @color;
 	-ms-text-shadow: @h @v @blur @color;
@@ -73,12 +80,14 @@
 
 
 .box_drop_shadow(@h: 3px, @v: 3px, @r: 5px, @color: @primary_color_dark){
+
 	-webkit-box-shadow: @h @v @r @color;
 	-moz-box-shadow: @h @v @r @color;
 	box-shadow: @h @v @r @color;
 }
 
 .box_inset_shadow(@h: 0px, @v: 1px, @r: 1px, @color: @primary_color_light){
+
 	-webkit-box-shadow: @h @v @r @color;
 	-moz-box-shadow: @h @v @r @color;
 	box-shadow: @h @v @r @color;
@@ -91,5 +100,4 @@
 	background-image: -moz-linear-gradient(@pos, @start_color, @end_color);
 	background-image: -o-linear-gradient(@pos, @start_color, @end_color);
 	background-image: linear-gradient(@pos, @start_color, @end_color);
-
 }

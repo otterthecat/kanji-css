@@ -105,6 +105,7 @@ Segments
 .quarter {
   width: 25%;
   float: left;
+  word-break: break-all;
 }
 /* Halves
 *************************************************************/
@@ -236,10 +237,21 @@ fieldset {
   border: 1px dotted #727272;
   padding: 1em;
 }
-input[type='text'],
-select {
-  width: 75%;
-  max-width: 200px;
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea,
+select,
+label {
+  display: block;
+}
+input[type="text"],
+select,
+textarea {
+  margin: 0 0 10px 0;
+}
+textarea {
+  min-height: 125px;
 }
 input,
 textarea,

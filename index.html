@@ -100,10 +100,18 @@ var f = function(x){
 				<fieldset>
 					<legend>Text Fields</legend>
 					<label for="name">Name:</label>
-					<input id="name" type="text">
+					<input id="name" type="text" class="half">
+					<label for="choice" class="row">Pick One:</label>
+					<select id="choice" class="half">
+						<option value="1">choice 1</option>
+						<option value="2">choice 2</option>
+						<option value="3">choice 3</option>
+					</select>
+					<label for="filler" class="row">Filler:</label>
+					<textarea id="filler" class="half"></textarea>
 				</fieldset>
 				
-				<fieldset>
+				<fieldset class="inline">
 					<legend>Inputs</legend>
 					<h6>Colors:</h6>
 					<label>White<input name="color" value="white" type="checkbox"></label>

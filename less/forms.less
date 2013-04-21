@@ -5,16 +5,37 @@ Forms
 ***************************************************************/
 
 fieldset{
+
 	border: 1px dotted @support_color_med_light;
 	padding: 1em;
 }
 
-input[type='text'], select{
-	width: 75%;
-	max-width: 200px;
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+textarea,
+select,
+label{
+
+	display: block;
 }
 
+
+input[type="text"],
+select,
+textarea{
+
+	margin: 0 0 10px 0;
+}
+
+textarea{
+
+	min-height: 125px;
+}
+
+
 input, textarea, button {
+
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
@@ -28,10 +49,12 @@ input:focus, textarea:focus, select:focus{
 }
 
 button, select{
+
 	cursor: pointer;
 }
 
 button{
+
 	border: 1px solid @support_color_dark;
 	color: @support_color_light;
 	font-size: inherit; /* helps keeps button size logical in relation to page - particularly Safari/iOS */
@@ -44,6 +67,7 @@ button:hover{
 }
 
 .inline label, .inline input, .inline select, .inline button{
+
 	display: inline-block;
 	margin: 0 .25em;
 }
