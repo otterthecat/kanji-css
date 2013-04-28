@@ -377,7 +377,7 @@ body {
 .kanji > nav ul li a {
   display: block;
 }
-.kanji .kanji > footer {
+.kanji > footer {
   clear: both;
   background: #107633;
   height: 5em;
