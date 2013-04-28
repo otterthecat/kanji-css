@@ -115,7 +115,8 @@ Segments
 /* Halves
 *************************************************************/
 .halves > *,
-.half {
+.half,
+.half + * {
   width: 50%;
   float: left;
 }
@@ -350,7 +351,7 @@ body {
   color: #b2b2b2;
 }
 .kanji {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding: 0;
 }
@@ -372,6 +373,9 @@ body {
 }
 .kanji > nav {
   width: 100%;
+}
+.kanji > nav ul {
+  padding: 0;
 }
 .kanji > nav ul li {
   display: inline-block;
