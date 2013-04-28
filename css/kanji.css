@@ -181,6 +181,15 @@ body {
   font-size: 12px;
   font-size: 1.2rem;
 }
+ol,
+ol.half ol.third,
+ol.quarter,
+ul,
+ul.half,
+ul.third,
+ul.quarter {
+  padding-left: 1rem;
+}
 p {
   margin: .5em 0 0 0;
 }
@@ -229,6 +238,9 @@ blockquote:after {
 .right-text {
   text-align: right;
 }
+.left-text {
+  text-align: left;
+}
 .underline {
   text-decoration: underline;
 }
@@ -254,6 +266,9 @@ fieldset {
 }
 label:after {
   content: ":";
+}
+label.clean:after {
+  content: " ";
 }
 input[type="text"],
 input[type="email"],
@@ -337,12 +352,16 @@ body {
   margin: 0 auto;
   padding: 0;
 }
+.kanji > * {
+  padding: 1%;
+}
 .kanji > header {
   background: #19b950;
   height: 7em;
   padding-top: 0;
 }
-.kanji > header > h1 {
+.kanji > header h1,
+.kanji > header h2 {
   -webkit-text-shadow: 3px 3px 3px #107633;
   -moz-text-shadow: 3px 3px 3px #107633;
   -ms-text-shadow: 3px 3px 3px #107633;
@@ -358,13 +377,13 @@ body {
 .kanji > nav ul li a {
   display: block;
 }
-.kanji > footer {
+.kanji .kanji > footer {
   clear: both;
   background: #107633;
   height: 5em;
   padding-bottom: 0;
 }
-a {
+.kanji a {
   color: #b9f5f0;
 }
 /* Media Breaks
@@ -372,7 +391,10 @@ a {
 /* iPad Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   .kanji {
-    width: 90%;
+    width: 100%;
+  }
+  .kanji > * {
+    padding: 2%;
   }
   .halves > *,
   .half,
@@ -385,7 +407,7 @@ a {
   .third,
   .quarters > *,
   .quarter {
-    width: 50%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -407,6 +429,9 @@ a {
     margin: 0;
     word-wrap: break-word;
   }
+  .kanji > * {
+    padding: 2%;
+  }
   .kanji > header {
     height: auto;
     min-height: 7em;
@@ -420,6 +445,9 @@ a {
   html {
     font-family: Arial, sans-serif;
     font-size: 115%;
+  }
+  html .kanji > * {
+    padding: 2%;
   }
   /* segments */
   .halves > *,

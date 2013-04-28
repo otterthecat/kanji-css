@@ -22,48 +22,48 @@ body {
 	width: 80%;
 	margin: 0 auto;
 	padding: 0;
-}
 
-.kanji > * {
+	> * {
+		
+		padding: 1%;
+	}
 
-}
+	> header {
 
-.kanji > header{
+		background: @primary_color;
+		height: 7em;
+		padding-top: 0;
 
-	background: @primary_color;
-	height: 7em;
-	padding-top: 0;
-}
-
-.kanji > header > h1{
-
-	.text_drop_shadow();
-}
-
-.kanji >  nav{
-	
-	width: 100%;
-
-	ul li{
-		display: inline-block;
-
-		a{
-			display: block;
+		h1,h2 {
+			.text_drop_shadow();
 		}
 	}
-}
 
-.kanji > footer{
+	> nav {
 
-	clear: both;
-	background: @primary_color_dark;
-	height: 5em;	
-	padding-bottom: 0;
-}
+		width: 100%;
 
-a {
+		ul li{
+			display: inline-block;
 
-	color: @secondary_color;
+			a{
+				display: block;
+			}
+		}
+	}
+
+	.kanji > footer{
+
+		clear: both;
+		background: @primary_color_dark;
+		height: 5em;
+		padding-bottom: 0;
+	}
+
+	a {
+
+		color: @secondary_color;
+	}
 }
 
 /* Media Breaks
