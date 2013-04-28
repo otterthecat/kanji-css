@@ -30,6 +30,7 @@ ul,
 ol,
 nav,
 iframe,
+img,
 input,
 button,
 textarea,
@@ -182,13 +183,14 @@ body {
   font-size: 1.2rem;
 }
 ol,
-ol.half ol.third,
+ol.half,
+ol.third,
 ol.quarter,
 ul,
 ul.half,
 ul.third,
 ul.quarter {
-  padding-left: 1rem;
+  padding-left: 2rem;
 }
 p {
   margin: .5em 0 0 0;
@@ -385,6 +387,15 @@ body {
 }
 .kanji a {
   color: #b9f5f0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #b2b2b2;
+  -webkit-box-shadow: 3px 3px 5px #0c0c0c;
+  -moz-box-shadow: 3px 3px 5px #0c0c0c;
+  box-shadow: 3px 3px 5px #0c0c0c;
 }
 /* Media Breaks
 **************************************************************/
