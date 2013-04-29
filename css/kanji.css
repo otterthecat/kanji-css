@@ -292,6 +292,12 @@ textarea {
   font-size: 1.2rem;
   margin: 0 0 2rem 0;
 }
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: middle;
+}
 select {
   height: auto;
 }
@@ -315,7 +321,8 @@ select:focus {
   box-shadow: 0px 0px 5px #76ebe2;
 }
 button,
-select {
+select,
+input {
   cursor: pointer;
 }
 button {
@@ -378,13 +385,15 @@ body {
   padding: 0;
 }
 .kanji > nav ul li {
-  display: inline-block;
+  display: inline;
+  padding: .25rem .5rem .25rem 0;
 }
 .kanji > nav ul li a {
-  display: block;
+  display: inline-block;
 }
 .kanji > footer {
   clear: both;
+  width: 100%;
   background: #107633;
   height: 5em;
   padding-bottom: 0;
@@ -413,11 +422,10 @@ img {
   }
   .halves > *,
   .half,
+  .half + *,
   .three-quarters,
   .quarter + *,
-  .third + * {
-    width: 100%;
-  }
+  .third + *,
   .thirds > *,
   .third,
   .quarters > *,
@@ -428,6 +436,7 @@ img {
 @media only screen and (max-width: 480px) {
   .halves > *,
   .half,
+  .half + *,
   .quarter,
   .third,
   .quarter + *,
@@ -467,6 +476,7 @@ img {
   /* segments */
   .halves > *,
   .half,
+  .half + *,
   .thirds > *,
   .third,
   .third + *,

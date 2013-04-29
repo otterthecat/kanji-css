@@ -4,22 +4,18 @@
 	.kanji {
 
 		width: 100%;
+
+		> * {
+			padding: 2%;
+		}
 	}
 
-	.kanji > * {
-		padding: 2%;
-	}
-
-	.halves > *, .half, .three-quarters,
-	.quarter + *, .third + * {
-
-		width: 100%;
-	}
-
+	.halves > *, .half, .half + *,
+	.three-quarters,
+	.quarter + *, .third + *, 
 	.thirds > *, .third,
 	.quarters > *, .quarter{
 
 		width: 100%;
 	}
-	
 }
