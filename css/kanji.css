@@ -380,16 +380,18 @@ body {
 }
 .kanji > nav {
   width: 100%;
+  float: left;
 }
 .kanji > nav ul {
   padding: 0;
 }
 .kanji > nav ul li {
-  display: inline;
+  display: inline-block;
   padding: .25rem .5rem .25rem 0;
 }
 .kanji > nav ul li a {
-  display: inline-block;
+  display: block;
+  width: 100%;
 }
 .kanji > footer {
   clear: both;
@@ -508,11 +510,6 @@ img {
   nav > ul {
     width: 100%;
     float: left;
-  }
-  nav > ul > li {
-    width: 100%;
-    float: none;
-    padding: 0;
   }
   nav > ul > li:last-child:after {
     content: "";
