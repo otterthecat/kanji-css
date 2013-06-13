@@ -365,55 +365,10 @@ body {
 .kanji > * {
   padding: 1%;
 }
-.kanji > header.main-header {
-  background: #19b950;
-  height: 7em;
-  padding-top: 0;
-}
-.kanji > header.main-header h1,
-.kanji > header.main-header h2 {
-  -webkit-text-shadow: 3px 3px 3px #107633;
-  -moz-text-shadow: 3px 3px 3px #107633;
-  -ms-text-shadow: 3px 3px 3px #107633;
-  -o-text-shadow: 3px 3px 3px #107633;
-  text-shadow: 3px 3px 3px #107633;
-}
-.kanji > nav.main-menu-bar {
-  width: 100%;
-  float: left;
-  /* TODO - implement code for sub menus */
-
-}
-.kanji > nav.main-menu-bar ul.main-menu {
-  padding: 0;
-  list-style-type: none;
-}
-.kanji > nav.main-menu-bar ul.main-menu li {
-  display: inline-block;
-  margin: 0 .75rem 0 0;
-}
-.kanji > nav.main-menu-bar ul.main-menu li:last-child {
-  padding-right: 0;
-}
-.kanji > nav.main-menu-bar ul.main-menu li a {
-  padding: .25rem .5rem
-                  display: block;
-  white-space: nowrap;
-}
-.kanji > nav.main-menu-bar ul.main-menu li.selected a {
-  color: #76ebe2;
-}
-.kanji > footer.main-footer {
-  clear: both;
-  width: 100%;
-  background: #107633;
-  height: 5em;
-  padding-bottom: 0;
-}
 .kanji a {
   color: #b9f5f0;
 }
-img {
+.kanji img {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
@@ -421,6 +376,51 @@ img {
   -webkit-box-shadow: 3px 3px 5px #0c0c0c;
   -moz-box-shadow: 3px 3px 5px #0c0c0c;
   box-shadow: 3px 3px 5px #0c0c0c;
+}
+#main-header {
+  background: #19b950;
+  min-height: 7em;
+  padding-top: 0;
+}
+#main-header h1,
+#main-header h2 {
+  -webkit-text-shadow: 3px 3px 3px #107633;
+  -moz-text-shadow: 3px 3px 3px #107633;
+  -ms-text-shadow: 3px 3px 3px #107633;
+  -o-text-shadow: 3px 3px 3px #107633;
+  text-shadow: 3px 3px 3px #107633;
+}
+#main-menu-bar {
+  width: 100%;
+  float: left;
+  /* TODO - implement code for sub menus */
+
+}
+#main-menu-bar ul.main-menu {
+  padding: 0;
+  list-style-type: none;
+}
+#main-menu-bar ul.main-menu li {
+  display: inline-block;
+  margin: 0 .75rem 0 0;
+}
+#main-menu-bar ul.main-menu li:last-child {
+  padding-right: 0;
+}
+#main-menu-bar ul.main-menu li a {
+  padding: .25rem .5rem
+              display: block;
+  white-space: nowrap;
+}
+#main-menu-bar ul.main-menu li.selected a {
+  color: #76ebe2;
+}
+#main-footer {
+  clear: both;
+  width: 100%;
+  background: #107633;
+  height: 5em;
+  padding-bottom: 0;
 }
 /* Media Breaks
 **************************************************************/

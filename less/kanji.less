@@ -28,69 +28,70 @@ body {
         padding: 1%;
     }
 
-    > header.main-header {
-
-        background: @primary_color;
-        height: 7em;
-        padding-top: 0;
-
-        h1,h2 {
-            .text_drop_shadow();
-        }
-    }
-
-    > nav.main-menu-bar {
-
-        width: 100%;
-        float: left;
-
-        /* TODO - implement code for sub menus */
-        ul.main-menu {
-            padding: 0;
-            list-style-type: none;
-
-            li{
-                display: inline-block;
-                margin: 0 .75rem 0 0;
-
-                &:last-child{
-                  padding-right: 0;
-                }
-
-                a{
-                  padding: .25rem .5rem
-                  display: block;
-                  white-space: nowrap;
-                }
-            }
-
-            li.selected a{
-                color: @secondary_color_dark;
-            }
-        }
-    }
-
-    > footer.main-footer{
-
-        clear: both;
-        width: 100%;
-        background: @primary_color_dark;
-        height: 5em;
-        padding-bottom: 0;
-    }
-
     a {
 
         color: @secondary_color;
     }
+
+    img{
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border: 1px solid @support_color_light;
+        .box_drop_shadow();
+    }
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    border: 1px solid @support_color_light;
-    .box_drop_shadow();
+
+#main-header {
+
+    background: @primary_color;
+    min-height: 7em;
+    padding-top: 0;
+
+    h1,h2 {
+        .text_drop_shadow();
+    }
+}
+
+#main-menu-bar {
+
+    width: 100%;
+    float: left;
+
+    /* TODO - implement code for sub menus */
+    ul.main-menu {
+        padding: 0;
+        list-style-type: none;
+
+        li{
+            display: inline-block;
+            margin: 0 .75rem 0 0;
+
+            &:last-child{
+              padding-right: 0;
+            }
+
+            a{
+              padding: .25rem .5rem
+              display: block;
+              white-space: nowrap;
+            }
+        }
+
+        li.selected a{
+            color: @secondary_color_dark;
+        }
+    }
+}
+
+#main-footer{
+
+    clear: both;
+    width: 100%;
+    background: @primary_color_dark;
+    height: 5em;
+    padding-bottom: 0;
 }
 
 /* Media Breaks
