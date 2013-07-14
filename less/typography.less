@@ -4,44 +4,44 @@ Kanji CSS
 Typography - requires mixins
 ***************************************************************/
 html{
-	
-	font-family: Arial, sans-serif;
-	font-size: 100%;
+    
+    font-family: Arial, sans-serif;
+    font-size: 100%;
 }
 
 h1{
 
-	.font_size(2.4);
+    .font_size(2.4);
 }
 
 h2{
 
-	.font_size(2.2);
+    .font_size(2.2);
 }
 
 h3{
 
-	.font_size(2);
+    .font_size(2);
 }
 
 h4{
 
-	.font_size(1.8);
+    .font_size(1.8);
 }
 
 h5{
 
-	.font_size(1.6);
+    .font_size(1.6);
 }
 
 h6{
 
-	.font_size(1.4);
+    .font_size(1.4);
 }
 
 body{
 
-	.font_size(1.2);
+    .font_size(1.2);
 }
 
 ol,
@@ -52,66 +52,53 @@ ul,
 ul.half,
 ul.third,
 ul.quarter{
-	padding-left: 2rem;
+    padding-left: 2rem;
 }
 
 p{
-	margin: .5em 0 0 0;
+    margin: .5em 0 0 0;
 }
 
 a{
-	
-	text-decoration: none;
+
+    text-decoration: none;
 }
 
 strong{
 
-	font-weight: bold;
+    font-weight: bold;
 }
 
 em, .italic{
-	font-style: italic;
+    font-style: italic;
 }
 
 /* Firefox (Linux & OSX) renders font a little
    larger than expected... */
 pre{
-	padding: .25em;
-	border: 1px solid @support_color_light;
-	overflow: auto;
+    padding: .25em;
+    border: 1px solid @support_color_light;
+    overflow: auto;
 }
 
 code{
-	.font_size(.9);
-	padding: 0 .4em;
-	color: @secondary_color_med_dark;
-	border-left: 1px solid @support_color_light;
-	border-right: 1px solid @support_color_light;
+    .font_size(.9);
+    padding: 0 .4em;
+    color: @secondary_color_med_dark;
+    border-left: 1px solid @support_color_light;
+    border-right: 1px solid @support_color_light;
 }
 
 blockquote{
-	.status_box(@support_color_med_light, @support_color_dark);
-	margin: 0;
-	padding: .7em;
-	.italic;
-}
-blockquote:before,
-blockquote:after{
-	content: '\"';
-}
+    .status_box(@support_color_med_light, @support_color_dark);
+    margin: 0;
+    padding: 1em 2em;
+    .italic;
+    .center-text;
 
-.center-text{
-	text-align: center;
-}
-
-.right-text{
-	text-align: right;
-}
-
-.left-text{
-	text-align: left;
-}
-
-.underline{
-	text-decoration: underline;
+    &:before,
+    &:after{
+        content: '\"';
+        font-size: 2rem;
+    }
 }

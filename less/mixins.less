@@ -28,76 +28,93 @@
 
 .status_box(@font_color: @error_color, @bg_color: @error_bg_color){
 
-	color: @font_color;
-	background: @bg_color;
-	border: 1px solid @font_color;
-	margin: .5em 0;
-	padding: .25em .5em;
+    color: @font_color;
+    background: @bg_color;
+    border: 1px solid @font_color;
+    margin: .5em 0;
+    padding: .25em .5em;
 }
 
 .error{
 
-	.status_box();
+    .status_box();
 }
 
 .warn{
 
-	.status_box(@warn_color, @warn_bg_color);
+    .status_box(@warn_color, @warn_bg_color);
 }
 
 .info{
 
-	.status_box(@info_color, @info_bg_color);
+    .status_box(@info_color, @info_bg_color);
 }
 
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
 .font_size(@sizeValue){
 
-	@remValue: @sizeValue;
-	@pxValue: (@sizeValue * 10);
-	font-size: ~"@{pxValue}px"; 
-	font-size: ~"@{remValue}rem";
+    @remValue: @sizeValue;
+    @pxValue: (@sizeValue * 10);
+    font-size: ~"@{pxValue}px"; 
+    font-size: ~"@{remValue}rem";
 }
 
 /* some helpers for basic css effects */
 .text_drop_shadow(@h: 3px, @v: 3px, @blur: 3px, @color: @primary_color_dark){
 
-	-webkit-text-shadow: @h @v @blur @color;
-	-moz-text-shadow: @h @v @blur @color;
-	-ms-text-shadow: @h @v @blur @color;
-	-o-text-shadow: @h @v @blur @color;
-	text-shadow: @h @v @blur @color;
+    -webkit-text-shadow: @h @v @blur @color;
+    -moz-text-shadow: @h @v @blur @color;
+    -ms-text-shadow: @h @v @blur @color;
+    -o-text-shadow: @h @v @blur @color;
+    text-shadow: @h @v @blur @color;
 }
 
 .text_inset_shadow(@h: 0px, @v: 1px, @blur: 1px, @color: @primary_color_med_light){
 
-	-webkit-text-shadow: @h @v @blur @color;
-	-moz-text-shadow: @h @v @blur @color;
-	-ms-text-shadow: @h @v @blur @color;
-	-o-text-shadow: @h @v @blur @color;
-	text-shadow: @h @v @blur @color;
+    -webkit-text-shadow: @h @v @blur @color;
+    -moz-text-shadow: @h @v @blur @color;
+    -ms-text-shadow: @h @v @blur @color;
+    -o-text-shadow: @h @v @blur @color;
+    text-shadow: @h @v @blur @color;
 }
 
 
 .box_drop_shadow(@h: 3px, @v: 3px, @r: 5px, @color: @support_color_dark){
 
-	-webkit-box-shadow: @h @v @r @color;
-	-moz-box-shadow: @h @v @r @color;
-	box-shadow: @h @v @r @color;
+    -webkit-box-shadow: @h @v @r @color;
+    -moz-box-shadow: @h @v @r @color;
+    box-shadow: @h @v @r @color;
 }
 
 .box_inset_shadow(@h: 0px, @v: 1px, @r: 1px, @color: @support_color_light){
 
-	-webkit-box-shadow: @h @v @r @color;
-	-moz-box-shadow: @h @v @r @color;
-	box-shadow: @h @v @r @color;
+    -webkit-box-shadow: @h @v @r @color;
+    -moz-box-shadow: @h @v @r @color;
+    box-shadow: @h @v @r @color;
 }
 
 .bg_gradient(@pos: top, @start_color: @support_color_med_light , @end_color: @support_color_dark){
 
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@pos), color-stop(0.5, @start_color), to(@end_color));
-	background-image: -webkit-linear-gradient(@pos, @start_color, @end_color);
-	background-image: -moz-linear-gradient(@pos, @start_color, @end_color);
-	background-image: -o-linear-gradient(@pos, @start_color, @end_color);
-	background-image: linear-gradient(@pos, @start_color, @end_color);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@pos), color-stop(0.5, @start_color), to(@end_color));
+    background-image: -webkit-linear-gradient(@pos, @start_color, @end_color);
+    background-image: -moz-linear-gradient(@pos, @start_color, @end_color);
+    background-image: -o-linear-gradient(@pos, @start_color, @end_color);
+    background-image: linear-gradient(@pos, @start_color, @end_color);
+}
+
+/* text helpers */
+.center-text{
+    text-align: center;
+}
+
+.right-text{
+    text-align: right;
+}
+
+.left-text{
+    text-align: left;
+}
+
+.underline{
+    text-decoration: underline;
 }
