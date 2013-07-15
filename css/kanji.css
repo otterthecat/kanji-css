@@ -1,7 +1,7 @@
 /* KANJI CSS */
 /* Imports
 ***************************************************************/
-/* 
+/*
 Kanji CSS
 
 Reset
@@ -73,6 +73,7 @@ label {
 }
 /* thanks to http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
 /* some helpers for basic css effects */
+/* text helpers */
 .center-text {
   text-align: center;
 }
@@ -249,7 +250,7 @@ blockquote:after {
   content: '\"';
   font-size: 2rem;
 }
-/* 
+/*
 Kanji CSS
 
 Forms
@@ -269,11 +270,17 @@ fieldset {
 .quarter textarea {
   width: 100%;
 }
-label:after {
-  content: ":";
+label {
+  float: left;
+  width: 100%;
 }
-label.clean:after {
-  content: " ";
+label:hover {
+  color: #323232;
+  background-color: #8cefe6;
+}
+label input {
+  padding-left: 1rem;
+  float: right;
 }
 input[type="text"],
 input[type="email"],

@@ -1,4 +1,4 @@
-/* 
+/*
 Kanji CSS
 
 Forms
@@ -6,8 +6,8 @@ Forms
 
 fieldset{
 
-	border: 1px dotted @support_color_med_light;
-	padding: 1em;
+    border: 1px dotted @support_color_med_light;
+    padding: 1em;
 }
 
 .half input,
@@ -19,15 +19,22 @@ fieldset{
 .quarter input,
 .quarter select,
 .quarter textarea{
-	width: 100%;
+    width: 100%;
 }
 
-label:after{
-	content: ":";
-}
+label{
+    float: left;
+    width: 100%;
 
-label.clean:after{
-	content: " ";
+    &:hover{
+        color: @support_color;
+        background-color: @secondary_color_med_dark;
+    }
+
+    input{
+        padding-left: 1rem;
+        float: right;
+    }
 }
 
 input[type="text"],
@@ -37,7 +44,7 @@ input[type="url"],
 textarea,
 select,
 label{
-	display: block;
+    display: block;
 }
 
 
@@ -47,62 +54,62 @@ input[type="tel"],
 input[type="email"],
 select,
 textarea{
-	padding: .3rem;
-	font-size: 1.2rem;
-	margin: 0 0 2rem 0;
+    padding: .3rem;
+    font-size: 1.2rem;
+    margin: 0 0 2rem 0;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-	width: 1.25rem;
-	height: 1.25rem;
-	vertical-align: middle;
+    width: 1.25rem;
+    height: 1.25rem;
+    vertical-align: middle;
 }
 
 select{
-	height: auto;
+    height: auto;
 }
 
 textarea{
 
-	min-height: 125px;
+    min-height: 125px;
 }
 
 
 input, textarea, button {
 
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
 }
 
 input:focus, textarea:focus, select:focus{
 
-	.box_drop_shadow(0px, 0px, 5px, @secondary_color_dark);
+    .box_drop_shadow(0px, 0px, 5px, @secondary_color_dark);
 }
 
 button, select, input{
 
-	cursor: pointer;
+    cursor: pointer;
 }
 
 button{
 
-	border: 1px solid @support_color_dark;
-	color: @support_color_light;
-	font-size: inherit; /* helps keeps button size logical in relation to page - particularly Safari/iOS */
-	.bg_gradient;
+    border: 1px solid @support_color_dark;
+    color: @support_color_light;
+    font-size: inherit; /* helps keeps button size logical in relation to page - particularly Safari/iOS */
+    .bg_gradient;
 }
 
 button:hover{
 
-	.bg_gradient(top, @support_color_med_light, @support_color_med_dark);
+    .bg_gradient(top, @support_color_med_light, @support_color_med_dark);
 }
 
 .inline label, .inline input, .inline select, .inline button{
 
-	display: inline-block;
-	margin: 0 .25em;
+    display: inline-block;
+    margin: 0 .25em;
 }
