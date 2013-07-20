@@ -1,15 +1,14 @@
-/* 
+/*
 Kanji CSS
 
 Segments
 ***************************************************************/
-
-.halves, .half, .thirds,
-.third, .quarters, .quarter,
+.halves > *, .half, .thirds > *,
+.third, .quarters > *, .quarter,
 .quarter + *, .third + *{
 
 	margin:  0 0 .5rem;
-	padding: .25rem;
+	padding: 1em;
 }
 
 
@@ -68,7 +67,7 @@ Segments
 }
 
 .quarter + * + *{
-	
+
 	.clear-all;
 }
 
@@ -78,9 +77,9 @@ Segments
 .two-thirds:after,
 .three-quarters:after{
 
-   content: ""; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
+   content: "";
+   visibility: hidden;
+   display: block;
+   height: 0;
    .clear-all;
 }

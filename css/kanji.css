@@ -86,21 +86,21 @@ label {
 .underline {
   text-decoration: underline;
 }
-/* 
+/*
 Kanji CSS
 
 Segments
 ***************************************************************/
-.halves,
+.halves > *,
 .half,
-.thirds,
+.thirds > *,
 .third,
-.quarters,
+.quarters > *,
 .quarter,
 .quarter + *,
 .third + * {
   margin: 0 0 .5rem;
-  padding: .25rem;
+  padding: 1em;
 }
 /* Thirds
 *************************************************************/
@@ -367,7 +367,7 @@ body {
   color: #b2b2b2;
 }
 .kanji {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
 }
@@ -408,8 +408,10 @@ body {
 #main-menu-bar ul.main-menu {
   padding: 0;
   list-style-type: none;
+  text-align: center;
 }
 #main-menu-bar ul.main-menu li {
+  max-width: 150px;
   display: inline-block;
   margin: 0 .75rem 0 0;
 }
@@ -417,8 +419,9 @@ body {
   padding-right: 0;
 }
 #main-menu-bar ul.main-menu li a {
+  width: 100%;
   padding: .25rem .5rem
-              display: block;
+                display: block;
   white-space: nowrap;
 }
 #main-menu-bar ul.main-menu li.selected a {
