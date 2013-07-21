@@ -3,14 +3,21 @@ Kanji CSS
 
 Segments
 ***************************************************************/
+div > *,
 .halves > *, .half, .thirds > *,
 .third, .quarters > *, .quarter,
 .quarter + *, .third + *{
 
-	margin:  0 0 .5rem;
 	padding: 1em;
 }
 
+.kanji {
+	> div, > .halves,
+	> .quarters, > .thirds{
+		padding-top: 1.5em;
+		padding-bottom: 0;
+	}
+}
 
 /* Thirds
 *************************************************************/

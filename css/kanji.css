@@ -91,6 +91,7 @@ Kanji CSS
 
 Segments
 ***************************************************************/
+div > *,
 .halves > *,
 .half,
 .thirds > *,
@@ -99,8 +100,14 @@ Segments
 .quarter,
 .quarter + *,
 .third + * {
-  margin: 0 0 .5rem;
   padding: 1em;
+}
+.kanji > div,
+.kanji > .halves,
+.kanji > .quarters,
+.kanji > .thirds {
+  padding-top: 1.5em;
+  padding-bottom: 0;
 }
 /* Thirds
 *************************************************************/
@@ -159,7 +166,7 @@ Segments
   height: 0;
   clear: both;
 }
-/* 
+/*
 Kanji CSS
 
 Typography - requires mixins
@@ -207,7 +214,7 @@ ul.quarter {
   padding-left: 2rem;
 }
 p {
-  margin: .5em 0 0 0;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -372,7 +379,7 @@ body {
   padding: 0;
 }
 .kanji > * {
-  padding: 1%;
+  padding: 0 1% 1% 1%;
 }
 .kanji a {
   color: #b9f5f0;
@@ -431,7 +438,7 @@ body {
   clear: both;
   width: 100%;
   background: #107633;
-  height: 5em;
+  min-height: 5em;
   padding-bottom: 0;
 }
 /* Media Breaks
@@ -450,17 +457,22 @@ body {
   .three-quarters,
   .quarter + *,
   .third + *,
-  .thirds > *,
+  .thirds > *:first-child,
   .third,
   .quarters > *,
   .quarter {
     width: 100%;
+  }
+  .thirds > *,
+  .quarters > * {
+    width: 50%;
   }
 }
 @media only screen and (max-width: 480px) {
   .halves > *,
   .half,
   .half + *,
+  .thirds > *,
   .quarter,
   .third,
   .quarter + *,
@@ -468,7 +480,6 @@ body {
   .three-quarters {
     width: 100%;
   }
-  .thirds > *,
   .quarters > * {
     width: 50%;
   }
@@ -478,7 +489,7 @@ body {
     word-wrap: break-word;
   }
   .kanji > * {
-    padding: 2%;
+    padding: 0 2% 2% 2%;
   }
   .kanji > header {
     height: auto;
@@ -523,7 +534,7 @@ body {
   .thirds:after,
   .quarters:after,
   .clear {
-    display: absolute;
+    position: absolute;
   }
   nav {
     width: 100%;
