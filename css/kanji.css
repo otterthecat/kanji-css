@@ -183,7 +183,7 @@ Kanji CSS
 Typography - requires mixins
 ***************************************************************/
 html {
-  font-family: 'CartoGothic', 'Arial', 'SansSerif';
+  font-family: 'CartoGothic', 'Arial';
   font-size: 105%;
 }
 h1,
@@ -192,8 +192,10 @@ h3,
 h3,
 h5,
 h6 {
-  font-family: 'Archive', 'Arial', 'SansSerif';
+  font-family: 'Archive', 'Arial';
   font-weight: normal;
+  word-wrap: normal;
+  word-break: keep-all;
 }
 h1 {
   font-size: 24px;
@@ -416,7 +418,7 @@ body {
 #main-header {
   background: #19b950;
   min-height: 7em;
-  padding-top: 0;
+  padding: 1em;
 }
 #main-header h1,
 #main-header h2 {
