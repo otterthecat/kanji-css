@@ -9,8 +9,8 @@
 }
 /* headers */
 @font-face {
-  font-family: 'Archive';
-  src: url('../fonts/Archive/Archive.otf');
+  font-family: 'LeagueGothic';
+  src: url('../fonts/LeagueGothic/leaguegothic-regular-webfont.ttf');
 }
 /*
 Kanji CSS
@@ -192,34 +192,34 @@ h3,
 h3,
 h5,
 h6 {
-  font-family: 'Archive', 'Arial';
+  font-family: 'LeagueGothic', 'Arial';
   font-weight: normal;
   word-wrap: normal;
   word-break: keep-all;
 }
 h1 {
+  font-size: 38px;
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 28px;
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 26px;
+  font-size: 2.6rem;
+}
+h4 {
   font-size: 24px;
   font-size: 2.4rem;
 }
-h2 {
+h5 {
   font-size: 22px;
   font-size: 2.2rem;
 }
-h3 {
+h6 {
   font-size: 20px;
   font-size: 2rem;
-}
-h4 {
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-h5 {
-  font-size: 16px;
-  font-size: 1.6rem;
-}
-h6 {
-  font-size: 14px;
-  font-size: 1.4rem;
 }
 body {
   font-size: 12px;
@@ -418,10 +418,13 @@ body {
 #main-header {
   background: #19b950;
   min-height: 7em;
+  padding: ;
+}
+#main-header hgroup {
   padding: 1em;
 }
-#main-header h1,
-#main-header h2 {
+#main-header hgroup h1,
+#main-header hgroup h2 {
   -webkit-text-shadow: 3px 3px 3px #107633;
   -moz-text-shadow: 3px 3px 3px #107633;
   -ms-text-shadow: 3px 3px 3px #107633;
